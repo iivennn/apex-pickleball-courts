@@ -27,6 +27,7 @@ define('OPEN_HOUR', 6);          // first bookable slot starts 6:00 AM
 define('CLOSE_HOUR', 24);        // last slot ends 12:00 midnight
 define('DAYS_AHEAD', 14);        // how many days ahead people can book
 define('MAX_HOURS', 4);          // max hours per booking
+define('MAX_PLAYERS', 16);       // max players per booking
 define('CANCEL_HOURS', 24);      // free cancellation notice (shown to customers)
 
 date_default_timezone_set('Asia/Manila');

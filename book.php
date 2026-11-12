@@ -5,6 +5,7 @@ $pdo = db();
 $today = date('Y-m-d');
 $lastDay = date('Y-m-d', strtotime('+' . (DAYS_AHEAD - 1) . ' days'));
 $errors = [];
+$maxPlayers = defined('MAX_PLAYERS') ? (int) MAX_PLAYERS : 16;
 $old = ['name' => '', 'phone' => '', 'email' => '', 'players' => 4, 'payment' => 'gcash', 'slots' => []];
 
 // ---------- Which date / court are we looking at? ----------
@@ -89,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!filter_var($old['email'], FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Please enter a valid email address.';
     }
-    if ($old['players'] < 1 || $old['players'] > 8) {
-        $errors[] = 'Number of players must be between 1 and 8.';
+    if ($old['players'] < 1 || $old['players'] > $maxPlayers) {
+        $errors[] = 'Number of players must be between 1 and ' . $maxPlayers . '.';
     }
     if (!in_array($old['payment'], ['gcash', 'card', 'venue'], true)) {
         $errors[] = 'Please choose a payment method.';
@@ -204,7 +205,7 @@ require __DIR__ . '/includes/header.php';
             <label class="field">Full name<input type="text" name="name" value="<?= e($old['name']) ?>" required maxlength="100" autocomplete="name"></label>
             <label class="field">Mobile number<input type="tel" name="phone" value="<?= e($old['phone']) ?>" required placeholder="09XX XXX XXXX" autocomplete="tel"></label>
             <label class="field">Email<input type="email" name="email" value="<?= e($old['email']) ?>" required autocomplete="email"></label>
-            <label class="field">Number of players<input type="number" name="players" value="<?= e($old['players']) ?>" min="1" max="8" required></label>
+            <label class="field">Number of players<input type="number" name="players" value="<?= e($old['players']) ?>" min="1" max="<?= $maxPlayers ?>" required></label>
           </div>
         </div>
       </div>
