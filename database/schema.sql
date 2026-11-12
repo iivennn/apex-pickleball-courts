@@ -120,17 +120,15 @@ INSERT INTO admins (username, password_hash, full_name) VALUES
 
 INSERT INTO courts (name, court_type, hourly_rate, status, sort_order) VALUES
 ('Court 1', 'Indoor', 400.00, 'available', 1),
-('Court 2', 'Indoor', 400.00, 'available', 2),
-('Court 3', 'Outdoor', 300.00, 'available', 3),
-('Court 4', 'Outdoor', 300.00, 'available', 4);
+('Court 2', 'Indoor', 400.00, 'available', 2);
 
 INSERT INTO open_play_sessions (title, session_date, start_time, end_time, courts_label, skill_level, capacity, price) VALUES
 ('Morning Open Play', CURDATE() + INTERVAL 1 DAY, '07:00', '10:00', 'Courts 1–2', 'Beginner', 16, 150.00),
-('Evening Open Play', CURDATE() + INTERVAL 1 DAY, '18:00', '21:00', 'Courts 1–4', 'Intermediate', 24, 200.00),
-('Advanced Round Robin', CURDATE() + INTERVAL 2 DAY, '16:00', '19:00', 'Courts 3–4', 'Advanced', 12, 250.00),
-('Weekend Social Play', CURDATE() + INTERVAL 3 DAY, '08:00', '11:00', 'Courts 1–4', 'All levels', 24, 180.00);
+('Evening Open Play', CURDATE() + INTERVAL 1 DAY, '18:00', '21:00', 'Courts 1–2', 'Intermediate', 24, 200.00),
+('Advanced Round Robin', CURDATE() + INTERVAL 2 DAY, '16:00', '19:00', 'Courts 1–2', 'Advanced', 12, 250.00),
+('Weekend Social Play', CURDATE() + INTERVAL 3 DAY, '08:00', '11:00', 'Courts 1–2', 'All levels', 24, 180.00);
 
 INSERT INTO event_packages (name, price, features, is_popular, sort_order) VALUES
-('Half-Day', 5000.00, '2 courts for 4 hours\nPaddles & balls included\nSeating area', 0, 1),
-('Full-Day', 12000.00, 'All 4 courts for 8 hours\nPaddles, balls & scoreboards\nSound system', 1, 2),
+('Half-Day', 5000.00, '1 court for 4 hours\nPaddles & balls included\nSeating area', 0, 1),
+('Full-Day', 12000.00, 'Both courts for 8 hours\nPaddles, balls & scoreboards\nSound system', 1, 2),
 ('Tournament', NULL, 'Multi-day venue use\nBrackets & referees\nCatering options', 0, 3);
