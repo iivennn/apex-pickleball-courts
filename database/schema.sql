@@ -119,8 +119,8 @@ INSERT INTO admins (username, password_hash, full_name) VALUES
 ('admin', '$2y$10$eOdN9C7iHfTS2.wol88/e.Q0TenL/Xukf4kXYFC6rvRwTnaDjL08C', 'Administrator');
 
 INSERT INTO courts (name, court_type, hourly_rate, status, sort_order) VALUES
-('Court 1', 'Indoor', 400.00, 'available', 1),
-('Court 2', 'Indoor', 400.00, 'available', 2);
+('Court 1', 'Indoor', 250.00, 'available', 1),
+('Court 2', 'Indoor', 250.00, 'available', 2);
 
 INSERT INTO open_play_sessions (title, session_date, start_time, end_time, courts_label, skill_level, capacity, price) VALUES
 ('Morning Open Play', CURDATE() + INTERVAL 1 DAY, '07:00', '10:00', 'Courts 1–2', 'Beginner', 16, 150.00),
