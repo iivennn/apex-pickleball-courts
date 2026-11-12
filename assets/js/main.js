@@ -23,7 +23,7 @@
   var peso = new Intl.NumberFormat('en-PH', { maximumFractionDigits: 0 });
 
   function label(h) {
-    var suffix = h >= 12 ? 'PM' : 'AM';
+    var suffix = (h % 24) >= 12 ? 'PM' : 'AM';
     var hr = h % 12 === 0 ? 12 : h % 12;
     return hr + ':00 ' + suffix;
   }
