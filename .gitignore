@@ -1,0 +1,12 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local test databases
+*.db
+*.sqlite
+
+# Logs
+*.log
