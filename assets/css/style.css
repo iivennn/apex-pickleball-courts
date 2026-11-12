@@ -309,7 +309,7 @@ p { margin: 0; }
 .chart .col i { width: 100%; max-width: 48px; background: var(--green); border-radius: 6px 6px 0 0; min-height: 2px; }
 .chart .col.today i { background: var(--lime-strong); }
 .chart .col b { color: var(--ink); font-size: 13px; }
-.filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.filters { display: flex; flex-direction: row; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
 .filters .field { min-width: 160px; }
 .inline-form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .inline-form select, .inline-form input { min-height: 36px; padding: 4px 8px; border: 1px solid #a1a1aa; border-radius: 6px; font: inherit; font-size: 14px; }

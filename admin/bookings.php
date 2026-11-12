@@ -115,7 +115,7 @@ require __DIR__ . '/../includes/admin_header.php';
             <td><?= e(payment_label($b['payment_method'])) ?><br><span class="tag <?= $b['payment_status'] === 'paid' ? 'tag-green' : 'tag-orange' ?>"><?= $b['payment_status'] === 'paid' ? 'Paid' : 'Unpaid' ?></span></td>
             <td><span class="tag <?= $statusTags[$b['status']] ?? 'tag-gray' ?>"><?= e(ucwords(str_replace('_', ' ', $b['status']))) ?></span></td>
             <td>
-              <?php if ($active): ?>
+              <?php if ($active && $b['status'] !== 'completed'): ?>
               <div class="actions">
                 <?php if ($b['payment_status'] !== 'paid'): ?><?= action_button($id, 'paid', 'Mark paid', 'btn-outline', $keep) ?><?php endif; ?>
                 <?php if ($b['status'] === 'confirmed'): ?><?= action_button($id, 'checkin', 'Check in', 'btn-primary', $keep) ?><?php endif; ?>
