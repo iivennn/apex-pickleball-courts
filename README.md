@@ -32,12 +32,20 @@ Built with **PHP 8 + MySQL**, plain HTML/CSS and a little vanilla JavaScript —
 
 1. Install [XAMPP](https://www.apachefriends.org/) and start **Apache** and **MySQL**.
 2. Copy this folder into `C:\xampp\htdocs\apex-pickleball-courts`.
-3. Open **phpMyAdmin** (http://localhost/phpmyadmin), go to **Import**, choose `database/schema.sql`, and click **Go**.
-   This creates the `apex_pickleball` database with sample courts, sessions, and packages.
+3. Open **phpMyAdmin** (http://localhost/phpmyadmin), click **New**, create a database named `apex_pickleball`, then open its **Import** tab, choose `database/schema.sql`, and click **Go**.
+   This creates all the tables with sample courts, sessions, and packages.
 4. Visit **http://localhost/apex-pickleball-courts/**
 
 **Admin login:** http://localhost/apex-pickleball-courts/admin/
 Username `admin` · Password `admin123`. **Change it right away** in *My account*.
+
+## Put it online (free, InfinityFree)
+1. Create a free account at [infinityfree.com](https://infinityfree.com) and a hosting account with a free subdomain.
+2. In the control panel, open **MySQL Databases** and create a database. Note the **host, database name, username, and password**.
+3. Open **phpMyAdmin** for that database and **Import** `database/schema.sql`.
+4. Edit `config.php`: set `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASS` to the values from step 2.
+5. Open the **File Manager**, go into `htdocs`, delete the default files, and upload everything in this project.
+6. Visit your subdomain, log in at `/admin`, and change the admin password.
 
 ## Customize
 - **`config.php`**: database login, business address, phone, email, hours, Google Maps embed, and booking rules (opening hours, days ahead, max hours).

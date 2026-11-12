@@ -1,8 +1,7 @@
 -- Apex Pickleball Courts — database schema + starter data
--- Import this in phpMyAdmin (Import tab) or run:  mysql -u root < database/schema.sql
-
-CREATE DATABASE IF NOT EXISTS apex_pickleball CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE apex_pickleball;
+-- 1. Create an empty database first (locally: phpMyAdmin > New > "apex_pickleball";
+--    on web hosting: use the database your hosting control panel creates).
+-- 2. Select that database in phpMyAdmin, open the Import tab, and import this file.
 
 DROP TABLE IF EXISTS booking_slots;
 DROP TABLE IF EXISTS bookings;
