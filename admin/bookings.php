@@ -80,7 +80,7 @@ require __DIR__ . '/../includes/admin_header.php';
   <a href="../book.php" target="_blank" rel="noopener" class="btn btn-primary">+ Walk-in booking</a>
 </div>
 
-<form method="get" class="panel filters">
+<form method="get" class="panel filters" style="flex-direction: row; justify-content: flex-start">
   <label class="field">Date<input type="date" name="date" value="<?= e($date) ?>"></label>
   <label class="field">Status
     <select name="status">
