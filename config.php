@@ -12,8 +12,8 @@ define('DB_PASS', '');
 
 // Business info (shown in the footer and pages)
 define('SITE_NAME', 'Apex Pickleball Courts');
-define('SITE_CITY', 'Dumaguete City');
-define('SITE_ADDRESS', '[Your street address], Dumaguete City');
+define('SITE_CITY', 'Bacong, Negros Oriental');
+define('SITE_ADDRESS', 'Purok 5 Combado, Bacong, Negros Oriental 6216');
 define('SITE_PHONE', '0917 000 0000');
 define('SITE_EMAIL', 'hello@apexpickleball.ph');
 define('SITE_HOURS', 'Daily, 6:00 AM – 12:00 midnight');
