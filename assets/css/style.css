@@ -98,6 +98,7 @@ p { margin: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-art { flex: 1 1 400px; display: flex; justify-content: center; }
 .hero-art svg { width: 100%; max-width: 480px; height: auto; }
+.hero-video { display: block; width: 100%; max-width: 560px; aspect-ratio: 16 / 9; height: auto; object-fit: cover; border-radius: 16px; background: #0b0b0c; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
 
 /* ---------- Quick booking bar ---------- */
 .quick-book { margin-top: -44px; position: relative; z-index: 2; }

@@ -26,20 +26,11 @@ require __DIR__ . '/includes/header.php';
         <a href="open-play.php" class="btn btn-ghost-light">See open play schedule</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="20" width="460" height="260" rx="14" fill="#166534"/>
-        <rect x="40" y="50" width="400" height="200" fill="#15803d" stroke="#ffffff" stroke-width="4"/>
-        <line x1="176" y1="50" x2="176" y2="250" stroke="#ffffff" stroke-width="4"/>
-        <line x1="304" y1="50" x2="304" y2="250" stroke="#ffffff" stroke-width="4"/>
-        <line x1="40" y1="150" x2="176" y2="150" stroke="#ffffff" stroke-width="4"/>
-        <line x1="304" y1="150" x2="440" y2="150" stroke="#ffffff" stroke-width="4"/>
-        <rect x="176" y="50" width="128" height="200" fill="#bef264" opacity=".18"/>
-        <line x1="240" y1="38" x2="240" y2="262" stroke="#1e1e20" stroke-width="6" stroke-linecap="round"/>
-        <path d="M110 205 Q 200 40 330 110" fill="none" stroke="#bef264" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
-        <circle cx="338" cy="114" r="18" fill="#bef264"/>
-        <circle cx="332" cy="108" r="3" fill="#4d7c0f"/><circle cx="344" cy="111" r="3" fill="#4d7c0f"/><circle cx="336" cy="121" r="3" fill="#4d7c0f"/><circle cx="347" cy="122" r="2.5" fill="#4d7c0f"/>
-      </svg>
+    <div class="hero-art">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+             poster="assets/video/apex-promo-poster.jpg" aria-label="Apex Pickleball Courts promo video">
+        <source src="assets/video/apex-promo.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
