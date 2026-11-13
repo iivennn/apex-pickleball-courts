@@ -49,13 +49,6 @@ require __DIR__ . '/includes/header.php';
     <label class="field">Date
       <input type="date" name="date" value="<?= e($today) ?>" min="<?= e($today) ?>" max="<?= e(date('Y-m-d', strtotime('+' . (DAYS_AHEAD - 1) . ' days'))) ?>" required>
     </label>
-    <label class="field">Court type
-      <select name="type">
-        <option value="">Any court</option>
-        <option value="Indoor">Indoor</option>
-        <option value="Outdoor">Outdoor</option>
-      </select>
-    </label>
     <button type="submit" class="btn btn-primary">Check availability</button>
   </form>
 </section>
