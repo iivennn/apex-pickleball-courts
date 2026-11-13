@@ -27,10 +27,13 @@ require __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="hero-art">
+      <div class="hero-video-wrap">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata"
              poster="assets/video/apex-promo-poster.jpg" aria-label="Apex Pickleball Courts promo video">
         <source src="assets/video/apex-promo.mp4" type="video/mp4">
       </video>
+      <button type="button" class="video-sound" data-video-sound aria-pressed="false" aria-label="Turn sound on">🔇 Sound off</button>
+      </div>
     </div>
   </div>
 </section>

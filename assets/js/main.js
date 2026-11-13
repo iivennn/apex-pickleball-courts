@@ -63,3 +63,18 @@
   });
   update();
 })();
+
+// Hero video sound toggle (browsers only autoplay muted video)
+(function () {
+  var btn = document.querySelector('[data-video-sound]');
+  if (!btn) return;
+  var video = btn.parentNode.querySelector('video');
+  if (!video) return;
+  btn.addEventListener('click', function () {
+    video.muted = !video.muted;
+    if (!video.muted) { video.volume = 1; var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+    btn.setAttribute('aria-pressed', video.muted ? 'false' : 'true');
+    btn.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
+    btn.textContent = video.muted ? '🔇 Sound off' : '🔊 Sound on';
+  });
+})();

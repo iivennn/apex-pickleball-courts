@@ -326,3 +326,8 @@ p { margin: 0; }
 .login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; background: var(--charcoal); }
 .login-card { width: 100%; max-width: 420px; background: var(--white); border-radius: var(--radius); border-top: 6px solid var(--lime-strong); padding: 32px; display: flex; flex-direction: column; gap: 18px; }
 .login-logo { background: var(--charcoal); border-radius: 10px; padding: 16px; }
+
+.hero-video-wrap { position: relative; width: 100%; max-width: 560px; }
+.video-sound { position: absolute; right: 14px; bottom: 14px; padding: 8px 14px; border: 0; border-radius: 999px; background: rgba(0,0,0,.6); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.video-sound:hover { background: rgba(0,0,0,.8); }
+.video-sound[aria-pressed="true"] { background: #bef264; color: #14532d; }
